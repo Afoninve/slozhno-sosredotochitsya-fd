@@ -12,6 +12,13 @@ body {
   margin: 0 auto;
 }
 
+.page {
+  background-image: var(--main-bg-img);
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #191970;
+}
+
 h1,
 h2,
 h3,
@@ -39,4 +46,21 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+/*Стили, применяемые к шапке сайта*/
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  block-size: 100vh;
+  min-block-size: 375px;
+}
+
+.rec_sign {
+  justify-self: end;
+}
+
+.header__theme-menu {
+  justify-self: end;
 }
