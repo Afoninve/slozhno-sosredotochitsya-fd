@@ -7,6 +7,14 @@
   background-color: #191970;
 }
 
+.main__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 600;
+  line-height: 0.825;
+  color: #db00ff;
+  
+}
+
 .title-decor {
   background-color: #ff0070;
   color: #000028;
@@ -100,10 +108,7 @@
 
 .header__title {
   padding: 0 10px 55px;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 0.825;
   justify-self: flex-start;
-  color: #db00ff;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 .header__about {
@@ -161,4 +166,30 @@ section li {
 
 .tips__subtitle {
   font-weight: 400;
+}
+
+/*Секция 4*/
+
+.gallery {
+  padding: 50px 10px 0;
+}
+
+.gallery img {
+  max-inline-size: 355px;
+  padding-top: 10px;
+}
+
+/*Стили подвала*/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding-top: 40px;
+}
+
+.closing__title {
+  text-shadow: 2px 1px 0 var(--accent-color);
 }
