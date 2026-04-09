@@ -5,12 +5,40 @@
   background-position: center;
   background-attachment: fixed;
   background-color: #191970;
-
 }
 
 .title-decor {
   background-color: #ff0070;
   color: #000028;
+  font-size: 18px;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid #ff0070;
+  border-right: 1px solid #ff0070;
+}
+
+.decorated-zone::after {
+  content: '';
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid #ff0070;
+  border-left: 1px solid #ff0070;
 }
 
 /*Стили, применяемые к шапке сайта*/
@@ -49,17 +77,13 @@
 .header__theme-menu {
   justify-self: end;
   align-self: center;
-  padding: 75px 10px 0 0;
+  padding: 75px 10px 65px 0;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.header__theme-menu-item {
-  
 }
 
 .header__theme-menu-button {
@@ -83,10 +107,58 @@
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 .header__about {
-  max-inline-size: 355px;
-  max-block-size: 117px;
-  margin: 0 10px 66px 0;
+  margin: 0 10px 66px;
   justify-self: flex-end;
   font-weight: 600;
   line-height: 23.4px;
+}
+
+/*Стили, применяемые к основной части сайта*/
+
+.section__title {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23.4px;
+}
+
+.section__a {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+section p {
+  color: #f1b2ce;
+  padding-top: 10px;
+  line-height: 23.4px;
+}
+
+section li {
+  padding-top: 20px;
+}
+
+/*Секция 1*/
+
+.reasons {
+  padding: 40px 10px 0;
+}
+
+/*Секция 2*/
+
+.irritants {
+  padding: 50px 10px 0;
+}
+
+/*Секция 3*/
+
+.tips {
+  padding: 50px 10px 0;
+}
+
+.tips__title {
+  margin-top: 20px;
+}
+
+.tips__subtitle {
+  font-weight: 400;
 }
