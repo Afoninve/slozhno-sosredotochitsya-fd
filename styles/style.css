@@ -1,5 +1,92 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--main-bg-img);
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #191970;
+
+}
+
+.title-decor {
+  background-color: #ff0070;
+  color: #000028;
+}
+
+/*Стили, применяемые к шапке сайта*/
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  block-size: 100vh;
+  min-block-size: 375px;
+  position: relative;
+}
+
+.rec_sign {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  justify-self: end;
+  align-self: flex-start;
+  color: #ff0070;
+  text-transform: uppercase;
+}
+
+.rec_sign::after {
+  content: '';
+  display: block;
+  inline-size: 9px;
+  block-size: 9px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background-color: #ff0070;
+  box-shadow: 0 0 5px 2px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+  padding: 75px 10px 0 0;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  
+}
+
+.header__theme-menu-button {
+  padding: 1.5px 13px;
+  text-transform: lowercase;
+  color:#ff0070;
+  background-color: transparent;
+  border: none;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid #ff0070;
+}
+
+.header__title {
+  padding: 0 10px 55px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.825;
+  justify-self: flex-start;
+  color: #db00ff;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+.header__about {
+  max-inline-size: 355px;
+  max-block-size: 117px;
+  margin: 0 10px 66px 0;
+  justify-self: flex-end;
+  font-weight: 600;
+  line-height: 23.4px;
 }

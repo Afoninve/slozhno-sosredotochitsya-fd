@@ -10,13 +10,8 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
-}
-
-.page {
-  background-image: var(--main-bg-img);
-  background-position: center;
-  background-attachment: fixed;
-  background-color: #191970;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
 }
 
 h1,
@@ -48,19 +43,3 @@ a {
   line-height: inherit;
 }
 
-/*Стили, применяемые к шапке сайта*/
-
-.header {
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  block-size: 100vh;
-  min-block-size: 375px;
-}
-
-.rec_sign {
-  justify-self: end;
-}
-
-.header__theme-menu {
-  justify-self: end;
-}
