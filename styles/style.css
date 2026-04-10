@@ -15,7 +15,7 @@
 }
 
 .title-decor {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color-bg);
   color: var(--theme-subtitle-color);
   font-size: 18px;
 }
@@ -122,7 +122,7 @@
 .header__title {
   padding: var(--header-title-padding);
   justify-self: flex-start;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-color-a);
 }
 
 .header__about {
@@ -145,12 +145,12 @@
 
 .section__a {
   text-decoration: none;
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 1px 0 var(--accent-color-a);
 }
 
 .section__a:hover {
   text-decoration: underline;
-  text-decoration-color: var(--theme-text-color);
+  text-decoration-color: var(--accent-color);
 }
 
 .section__a:focus {
@@ -224,7 +224,7 @@ section li {
 }
 
 .closing__title {
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 1px 0 var(--accent-color-a);
 }
 
 /* Медиа-запросы :0 */
