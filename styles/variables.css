@@ -3,12 +3,36 @@
   и их переопределение под различные устройства
 */
 :root {
+/*bg variables*/
   --main-bg-img: url(../images/cover-image-dark.png);
   --main-bg-color: #191970;
+/*color variables*/
   --accent-color: #ff0070;
   --theme-subtitle-color: #000028;
   --theme-text-color: #f1b2ce;
   --main-title-color: #db00ff;
-  --maim-title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --button-hover-color: rgb(255 0 112 / 0.4);
+/*size, position variables*/
+  --main-title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --deco-position-top: 10px;
+  --deco-position-right: 10px;
+  --deco-position-bottom: 10px;
+  --deco-position-left: 10px;
+  --rec-position-top: 10px;
+  --rec-position-right: 19px;
+
+  --header-block-size: 668px;
+  --header-menu-padding: 75px 10px 65px 0;
+  --header-title-padding: 0 10px 55px;
+  --header-about-margin: 0 10px 66px;
+  --header-about-block-size: 117px;
+  --header-about-inline-size: 355px;
+
+  --first-main-padding: 40px 10px 0;
+  --section-padding: 50px 10px 0;
+  --irritants-title-inline-size: inherit;
+  --gallery-gap: 10px;
+
+  --footer-margin-top: 40px;
+  --footer-min-block-size: 668px;
 }

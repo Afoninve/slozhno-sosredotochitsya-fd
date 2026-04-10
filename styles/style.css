@@ -30,8 +30,8 @@
   inline-size: 25px;
   block-size: 25px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: var(--deco-position-top);
+  right: var(--deco-position-right);
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
 }
@@ -42,8 +42,8 @@
   inline-size: 25px;
   block-size: 25px;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: var(--deco-position-bottom);
+  left: var(--deco-position-left);
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
 }
@@ -54,7 +54,7 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   block-size: 100vh;
-  min-block-size: 375px;
+  min-block-size: var(--header-block-size);
   position: relative;
 }
 
@@ -62,8 +62,8 @@
   display: flex;
   gap: 10px;
   position: absolute;
-  top: 10px;
-  right: 19px;
+  top: var(--rec-position-top);
+  right: var(--rec-position-right);
   justify-self: end;
   align-self: flex-start;
   color: var(--accent-color);
@@ -84,7 +84,7 @@
 .header__theme-menu {
   justify-self: end;
   align-self: center;
-  padding: 75px 10px 65px 0;
+  padding: var(--header-menu-padding);
 }
 
 .header__theme-menu-list {
@@ -120,13 +120,15 @@
 }
 
 .header__title {
-  padding: 0 10px 55px;
+  padding: var(--header-title-padding);
   justify-self: flex-start;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__about {
-  margin: 0 10px 66px;
+  inline-size: var(--header-about-inline-size);
+  block-size: var(--header-about-block-size);
+  margin: var(--header-about-margin);
   justify-self: flex-end;
   font-weight: 600;
   line-height: 23.4px;
@@ -172,19 +174,23 @@ section li {
 /*Секция 1*/
 
 .reasons {
-  padding: 40px 10px 0;
+  padding: var(--first-main-padding);
 }
 
 /*Секция 2*/
 
 .irritants {
-  padding: 50px 10px 0;
+  padding: var(--section-padding);
+}
+
+.irritants__title {
+  max-inline-size: var(--irritants-title-inline-size);
 }
 
 /*Секция 3*/
 
 .tips {
-  padding: 50px 10px 0;
+  padding: var(--section-padding);
 }
 
 .tips__title {
@@ -198,12 +204,12 @@ section li {
 /*Секция 4*/
 
 .gallery {
-  padding: 50px 10px 0;
+  padding: var(--section-padding);
 }
 
 .gallery img {
   max-inline-size: 355px;
-  padding-top: 10px;
+  padding-top: var(--gallery-gap);
 }
 
 /*Стили подвала*/
@@ -213,8 +219,8 @@ section li {
   justify-content: center;
   align-items: center;
   block-size: 100vh;
-  min-block-size: 668px;
-  padding-top: 40px;
+  min-block-size: var(--footer-min-block-size);
+  margin-top: var(--footer-margin-top);
 }
 
 .closing__title {
@@ -224,43 +230,34 @@ section li {
 /* Медиа-запросы :0 */
 
 @media (width >= 768px) {
-  /*header*/
   :root {
     --main-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
+    --deco-position-top: 20px;
+    --deco-position-right: 20px;
+    --deco-position-bottom: 20px;
+    --deco-position-left: 20px;
+    --rec-position-top: 20px;
+    --rec-position-right: 29px;
 
-  .rec_sign {
-    top: 20px;
-    right: 29px;
-  }
+    --header-block-size: 1024px;
+    --header-menu-padding: 146px 20px 0 0;
+    --header-title-padding: 173px 0 162px;
+    --header-about-margin: 0 20px 183px;
+    --header-about-inline-size: 364px;
+    --header-about-block-size: 117px;
 
-  .decorated-zone::before {
-    top: 20px; 
-    right: 20px;
-  }
+    --first-main-padding: 60px 20px 0;
+    --section-padding: 80px 20px 0;
+    --irritants-title-inline-size: 236px;
 
-  .decorated-zone::after {
-    bottom: 20px;
-    left: 20px;
-  }
+    --gallery-template-rows: 23px 192px 230px 318px;
 
-  .header__theme-menu {
-    padding: 146px 20px 173px 0;
-  }
-
-  .header__title {
-    padding: 0 0 162px;
-  }
-
-  .header__about {
-    inline-size: 364px;
-    block-size: 117px;
-    margin: 0 20px 183px;
+    --footer-margin-top: 80px;
+    --footer-min-block-size: 1024px;
   }
 
   /*main*/
   .reasons {
-    padding: 60px 20px 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
@@ -270,16 +267,7 @@ section li {
     margin-top: 15px;
   }
 
-  .irritants {
-    padding: 80px 20px 0;
-  }
-
-  .irritants__title {
-    max-inline-size: 236px;
-  }
-
   .tips {
-    padding: 80px 20px 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
@@ -293,11 +281,10 @@ section li {
   }
 
   .gallery {
-    padding: 80px 20px 0;
     display: grid;
-    gap: 10px;
+    gap: var(--gallery-gap);
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 23px 192px 230px 318px;
+    grid-template-rows: var(--gallery-template-rows);
   }
 
   .gallery img {
@@ -337,11 +324,39 @@ section li {
     grid-column: -1 / -3;
     grid-row: 4;
   }
-
-  .footer {
-    margin-top: 80px;
-    padding: 0 20px;
-    min-block-size: 1024px;
-  }
 }
 
+@media (width >= 1024px) {
+  :root {
+    --header-block-size: 768px;
+    --header-menu-padding: 20px 0 0;
+    --header-title-padding: 63px 0 114px;
+    --header-about-inline-size: 490px;
+    --header-about-block-size: 70px;
+    --header-about-margin: 0 20px 134px;
+
+    --irritants-title-inline-size: 315px;
+    --gallery-gap: 20px;
+    --gallery-template-rows: 23px 260px 315px 433px;
+
+    --footer-min-block-size: 768px;
+  }
+  .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  /*main*/
+
+  .irritants__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
