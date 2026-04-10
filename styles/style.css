@@ -276,8 +276,12 @@ section li {
     grid-column: 2;
   }
 
-  .tips__title:not(:first-child) {
-    max-block-size: 23px;
+  .tips__list-title {
+    margin: 0;
+  }
+
+  .grid-column {
+    align-self: flex-start;
   }
 
   .gallery {
