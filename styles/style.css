@@ -59,7 +59,7 @@
 }
 
 .rec_sign {
-  display: flex;
+  display: var(--rec-display);
   gap: 10px;
   position: absolute;
   top: var(--rec-position-top);

@@ -6,7 +6,7 @@
 
 :root.theme-light {
   /*bg variables*/
-  --main-bg-img: url(../images/cover-image-light.png);
+  --main-bg-img: url(../images/cover-image-light.png); 
   --main-bg-color: lightpink;
 /*color variables*/
   --accent-color: #353430;
@@ -16,13 +16,12 @@
   --theme-text-color: #353430;
   --main-title-color: #ffc2e6;
   --button-hover-color: rgb(50 49 45 / 0.4);
-}
-.rec_sign {
-  display: none;
+
+  --rec-display: none;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  :root.theme-light {
   /*bg variables*/
   --main-bg-img: url(../images/cover-image-light.png);
   --main-bg-color: lightpink;
@@ -34,5 +33,7 @@
   --theme-text-color: #353430;
   --main-title-color: #ffc2e6;
   --button-hover-color: rgb(50 49 45 / 0.4);
+
+  --rec-display: none;
   }
 }

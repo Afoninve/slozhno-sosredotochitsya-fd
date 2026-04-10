@@ -15,6 +15,7 @@
   --main-title-color: #db00ff;
   --button-hover-color: rgb(255 0 112 / 0.4);
 /*size, position variables*/
+  --rec-display: flex;
   --main-title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --deco-position-top: 10px;
   --deco-position-right: 10px;
