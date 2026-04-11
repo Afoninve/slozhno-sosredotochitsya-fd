@@ -1,9 +1,7 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
   background-image: var(--main-bg-img);
   background-position: center;
-  background-clip: no-clip;
   background-repeat: repeat;
   background-attachment: fixed;
   background-color: var(--main-bg-color);
@@ -256,7 +254,7 @@ section li {
 
     --gallery-template-rows: 23px 192px 230px 318px;
 
-    --footer-margin-top: 80px;
+    --footer-margin-top: 60px;
     --footer-min-block-size: 1024px;
   }
 

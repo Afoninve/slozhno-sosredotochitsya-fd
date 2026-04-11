@@ -3,10 +3,10 @@
   и их переопределение под различные устройства
 */
 :root {
-/*bg variables*/
+
   --main-bg-img: url(../images/cover-image-dark.png);
-  --main-bg-color: #191970;
-/*color variables*/
+  --main-bg-color: #000028;
+
   --accent-color: #ff0070;
   --accent-color-bg: #ff0070;
   --accent-color-a: #ff0070;
@@ -14,7 +14,7 @@
   --theme-text-color: #f1b2ce;
   --main-title-color: #db00ff;
   --button-hover-color: rgb(255 0 112 / 0.4);
-/*size, position variables*/
+
   --rec-display: flex;
   --main-title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --deco-position-top: 10px;
