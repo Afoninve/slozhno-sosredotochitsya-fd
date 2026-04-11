@@ -167,14 +167,17 @@ section p {
   line-height: 23.4px;
 }
 
-section li {
-  padding-top: 20px;
-}
 
 /*Секция 1*/
 
 .reasons {
   padding: var(--first-main-padding);
+}
+
+.reasons, .reasons__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /*Секция 2*/
@@ -187,18 +190,26 @@ section li {
   max-inline-size: var(--irritants-title-inline-size);
 }
 
+.irritants, .irritants__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /*Секция 3*/
 
 .tips {
   padding: var(--section-padding);
 }
 
-.tips__list-title {
-  margin-top: 20px;
-}
-
 .tips__subtitle {
   font-weight: 400;
+}
+
+.tips, .tips__list, .grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /*Секция 4*/
@@ -242,7 +253,7 @@ section li {
     --rec-position-right: 29px;
 
     --header-block-size: 1024px;
-    --header-menu-padding: 146px 20px 0 0;
+    --header-menu-padding: 192px 20px 0 0;
     --header-title-padding: 173px 0 162px;
     --header-about-margin: 0 20px 183px;
     --header-about-inline-size: 364px;
@@ -266,7 +277,7 @@ section li {
   }
 
   .reasons__title {
-    margin-top: 15px;
+    magin-top: 15px;
   }
 
   .tips {
@@ -336,7 +347,7 @@ section li {
   :root {
     --header-block-size: 768px;
     --header-menu-padding: 20px 0 0;
-    --header-title-padding: 63px 0 114px;
+    --header-title-padding: 273px 0 114px;
     --header-about-inline-size: 490px;
     --header-about-block-size: 70px;
     --header-about-margin: 0 20px 134px;
