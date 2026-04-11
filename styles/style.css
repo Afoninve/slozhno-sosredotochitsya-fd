@@ -3,6 +3,8 @@
 .page {
   background-image: var(--main-bg-img);
   background-position: center;
+  background-clip: no-clip;
+  background-repeat: repeat;
   background-attachment: fixed;
   background-color: var(--main-bg-color);
 }
@@ -205,11 +207,13 @@ section li {
 
 .gallery {
   padding: var(--section-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gallery-gap);
 }
 
 .gallery img {
   max-inline-size: 355px;
-  padding-top: var(--gallery-gap);
 }
 
 /*Стили подвала*/
