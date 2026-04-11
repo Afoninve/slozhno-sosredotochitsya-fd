@@ -1,6 +1,6 @@
 :root.theme-light {
-  --main-bg-img: url(../images/cover-image-light.png); 
   --main-bg-color: #fce8ec;
+  --main-bg-img: url(../images/cover-image-light.png);
   --accent-color: #353430;
   --accent-color-bg: #ff8dcb;
   --accent-color-a: #ff8dcb;

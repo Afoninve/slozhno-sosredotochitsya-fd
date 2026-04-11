@@ -3,8 +3,8 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-bg-img: url(../images/cover-image-dark.png);
   --main-bg-color: #000028;
+  --main-bg-img: url(../images/cover-image-dark.png);
 
   --accent-color: #ff0070;
   --accent-color-bg: #ff0070;
