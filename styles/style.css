@@ -136,6 +136,19 @@
 
 /*Стили, применяемые к основной части сайта*/
 
+.section {
+  padding: var(--section-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__list, .grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .section__title {
   color: var(--accent-color);
   font-size: 18px;
@@ -149,7 +162,7 @@
 }
 
 .section__a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--theme-text-color);
   text-decoration-color: var(--accent-color);
 }
 
@@ -161,12 +174,11 @@
   outline: 1px solid var(--theme-text-color);
 }
 
-section p {
+.section__text {
   color: var(--theme-text-color);
   padding-top: 10px;
   line-height: 23.4px;
 }
-
 
 /*Секция 1*/
 
@@ -174,55 +186,27 @@ section p {
   padding: var(--first-main-padding);
 }
 
-.reasons, .reasons__list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 /*Секция 2*/
-
-.irritants {
-  padding: var(--section-padding);
-}
 
 .irritants__title {
   max-inline-size: var(--irritants-title-inline-size);
 }
 
-.irritants, .irritants__list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
 /*Секция 3*/
-
-.tips {
-  padding: var(--section-padding);
-}
 
 .tips__subtitle {
   font-weight: 400;
 }
 
-.tips, .tips__list, .grid-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 /*Секция 4*/
 
 .gallery {
-  padding: var(--section-padding);
-  display: flex;
-  flex-direction: column;
   gap: var(--gallery-gap);
 }
 
 .gallery img {
-  max-inline-size: 355px;
+  inline-size: 100%;
 }
 
 /*Стили подвала*/
@@ -243,41 +227,11 @@ section p {
 /* Медиа-запросы :0 */
 
 @media (width >= 768px) {
-  :root {
-    --main-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --deco-position-top: 20px;
-    --deco-position-right: 20px;
-    --deco-position-bottom: 20px;
-    --deco-position-left: 20px;
-    --rec-position-top: 20px;
-    --rec-position-right: 29px;
-
-    --header-block-size: 1024px;
-    --header-menu-padding: 192px 20px 0 0;
-    --header-title-padding: 173px 0 162px;
-    --header-about-margin: 0 20px 183px;
-    --header-about-inline-size: 364px;
-    --header-about-block-size: 117px;
-
-    --first-main-padding: 60px 20px 0;
-    --section-padding: 80px 20px 0;
-    --irritants-title-inline-size: 236px;
-
-    --gallery-template-rows: 23px 192px 230px 318px;
-
-    --footer-margin-top: 60px;
-    --footer-min-block-size: 1024px;
-  }
-
   /*main*/
   .reasons {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-  }
-
-  .reasons__title {
-    magin-top: 15px;
   }
 
   .tips {
@@ -299,13 +253,12 @@ section p {
 
   .gallery {
     display: grid;
-    gap: var(--gallery-gap);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: var(--gallery-template-rows);
   }
 
   .gallery img {
-    max-inline-size: 100%;
+    inline-size: 100%;
     display: block;
     padding: 0;
     width: 100%;
@@ -344,20 +297,6 @@ section p {
 }
 
 @media (width >= 1024px) {
-  :root {
-    --header-block-size: 768px;
-    --header-menu-padding: 20px 0 0;
-    --header-title-padding: 273px 0 114px;
-    --header-about-inline-size: 490px;
-    --header-about-block-size: 70px;
-    --header-about-margin: 0 20px 134px;
-
-    --irritants-title-inline-size: 315px;
-    --gallery-gap: 20px;
-    --gallery-template-rows: 23px 260px 315px 433px;
-
-    --footer-min-block-size: 768px;
-  }
   .header__theme-menu {
     justify-self: center;
     align-self: flex-start;

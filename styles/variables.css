@@ -38,3 +38,49 @@
   --footer-margin-top: 40px;
   --footer-min-block-size: 668px;
 }
+
+@media (width >= 768px) {
+  :root {
+    --main-title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --deco-position-top: 20px;
+    --deco-position-right: 20px;
+    --deco-position-bottom: 20px;
+    --deco-position-left: 20px;
+    --rec-position-top: 20px;
+    --rec-position-right: 29px;
+
+    --header-block-size: 1024px;
+    --header-menu-padding: 192px 20px 0 0;
+    --header-title-padding: 173px 0 162px;
+    --header-about-margin: 0 20px 183px;
+    --header-about-inline-size: 364px;
+    --header-about-block-size: 117px;
+
+    --first-main-padding: 60px 20px 0;
+    --section-padding: 80px 20px 0;
+    --irritants-title-inline-size: 236px;
+
+    --gallery-template-rows: 23px 192px 230px 318px;
+    --gallery-gap: 20px;
+
+    --footer-margin-top: 60px;
+    --footer-min-block-size: 1024px;
+  }
+}
+
+@media (width >= 1024px) {
+  :root {
+    --header-block-size: 768px;
+    --header-menu-padding: 20px 0 0;
+    --header-title-padding: 273px 0 114px;
+    --header-about-inline-size: 490px;
+    --header-about-block-size: 70px;
+    --header-about-margin: 0 20px 134px;
+
+    --irritants-title-inline-size: 315px;
+    --gallery-gap: 20px;
+    --gallery-template-rows: 23px 260px 315px 433px;
+
+    --footer-min-block-size: 768px;
+  }
+}
